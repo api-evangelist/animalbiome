@@ -1,23 +1,63 @@
 aid: animalbiome
 name: AnimalBiome
-description: 'AnimalBiome is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: AnimalBiome provides microbiome-based health solutions for pets, offering gut health supplements, microbiome testing kits, and probiotic
+  products. Their platform educates owners on gut health, supports veterinarians, and leverages scientific research to improve animal wellbeing
+  through targeted microbiome interventions.
 url: https://raw.githubusercontent.com/api-evangelist/animalbiome/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-25 (modular-v1; was harvest)
 specificationVersion: '0.20'
 created: '2026-09-24'
 modified: '2026-09-24'
 tags:
-- Company
-apis: []
+- Microbiome
+- Pet Health
+- Veterinary Products
+- Probiotics
+- Gut Health
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: LLMsTxt
+  url: llms/animalbiome-llms.txt
+- type: WellKnown
+  url: well-known/animalbiome-well-known.yml
+- type: Hosts
+  url: hosts/animalbiome-hosts.yml
+- type: Vendors
+  url: vendors/animalbiome-vendors.yml
+- type: TermsOfService
+  url: https://www.animalbiome.com/policies/terms-of-service
+- type: PrivacyPolicy
+  url: https://www.animalbiome.com/policies/privacy-policy
+- type: Newsroom
+  url: https://www.animalbiome.com/pages/press
+- type: DomainSecurity
+  url: security/animalbiome-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://www.animalbiome.com/
+apis:
+- name: AnimalBiome API
+  description: GraphQL API for AnimalBiome services
+  humanURL: https://www.animalbiome.com/api/graphql
+  baseURL: https://www.animalbiome.com/api
+  aid: animalbiome:animalbiome-api
+x-coverage:
+  state: unreadable
+  reason: js-rendered-docs
+  detail: API documentation pages return HTML shells for typical spec URLs, no machine‑readable OpenAPI found.
+  evidence:
+  - url: https://app.animalbiome.com/openapi.json
+    status: 200
+  checked: 2026-09-24
+x-enrichment:
+  date: '2026-09-25'
+  status: enriched
+  artifacts_added: 9
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
