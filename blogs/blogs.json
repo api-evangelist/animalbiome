@@ -1,0 +1,21 @@
+{
+  "repo": "animalbiome",
+  "feeds": [
+    {
+      "source": "https://www.animalbiome.com/blogs/dog",
+      "feed_url": "https://www.animalbiome.com/blogs/dog.atom",
+      "title": "",
+      "saved": 0,
+      "method": "discovered"
+    },
+    {
+      "source": "https://www.animalbiome.com/blogs/dog.atom",
+      "feed_url": "https://www.animalbiome.com/blogs/dog.atom",
+      "title": "",
+      "saved": 0,
+      "method": "feed"
+    }
+  ],
+  "post_count": 0,
+  "fetched": "2026-10-10T13:15:00Z"
+}
